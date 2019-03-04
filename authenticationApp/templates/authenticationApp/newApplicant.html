@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<form method="post">
+<form method="post" action="{% url 'calInfo' %}">
     {% csrf_token %}
-    {{ calform }}
+    {{ calform.as_p }}
     <button>Submit</button>
 </form>
 
